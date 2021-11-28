@@ -9,7 +9,7 @@
 body{
   overflow-x: hidden;
   background: hsl(20, 100%, 0%, 0.85);
-  background-image: url("assets/background1.jpg");
+  background-image: url("/venudhanekula/img/background1.jpg");
 }
 
 .max-width{
@@ -78,7 +78,7 @@ body{
     position: absolute;
     width: 40px;
     background-color: transparent;
-    background-image: url("assets/menu.png");
+    background-image: url("/venudhanekula/img/menu.png");
     background-repeat: no-repeat;
     object-fit: fill;
     border: 0;
@@ -89,7 +89,7 @@ body{
   }
   .menu-toggle[aria-expanded="true"]{
     transform: translateX(0%);
-    background-image: url("assets/close.png");
+    background-image: url("/venudhanekula/img/close.png");
   }
 }
 
