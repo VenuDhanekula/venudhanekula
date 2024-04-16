@@ -1,0 +1,489 @@
+:root{
+    --white: #ffffff;
+    --darkgray: #3c3c3c;
+    --lightgray: #818181;
+    --black: #000000;
+    --red: #f65253;
+    --darkred: #f80000;
+    --green: #0def45;
+
+    --availableColor: var(--green);
+    --backgroundColor: var(--darkgray);
+    --textColor: var(--white);
+    --iconColor: var(--lightgray);
+    --hoverIconColor: var(--white);
+    --updatingTextColor: var(--red);
+
+    --timeStyle: normal;
+
+    --boxiconsSize: 30px;
+    --firstPageTextSize: 40px;
+
+    --cursiveFont: 'Ruthie';
+    --regularFont: 'Trirong';
+    --normalFont: 'Montserrat';
+
+    --paddingLeft: 70px;
+    --paddingRight: 20px;
+    
+    width: 100%;
+    overflow-x:hidden;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    background-color: var(--backgroundColor);
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background-color: var(--backgroundColor);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: var(--textColor); 
+}
+
+/* Main Body Tag Paramenters */
+body{
+    background-color: var(--backgroundColor);
+}
+
+/* The sidebar menu */
+.sideNavBar_Section {
+    height: 100%;       /* Full-height: remove this if you want "auto" height */
+    width: 60px;        /* Set the width of the sidebar */
+    z-index: 100;       /* Stay on top */
+    top: 0;             /* Stay at the top */
+    left: 0;            /* Stay at the top */
+    position: fixed;
+    overflow: hidden;
+    border-right: var(--lightgray) solid 2px;
+    background-color: var(--backgroundColor);
+}
+
+.sideNavBar_div{
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+/* The navigation menu links */
+.sideNavBar_Section a{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: var(--boxiconsSize);
+    color: var(--iconColor);
+    text-decoration: none;
+    display: block;
+}
+
+.sideNavBar_Section a:hover{
+    color: var(--hoverIconColor);
+    background-color: var(--updatingTextColor);
+}
+
+.themeSection{
+    width: 30px;
+    position: absolute;
+    text-align: center;
+    top: 95%;
+    -ms-transform: translateY(-100%);
+    transform: translateY(-100%);
+}
+
+.theme-mode input {
+    height: 0;
+    opacity: 0;
+    width: 0;
+}
+
+.theme-mode .slider:before {
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    background: var(--textColor) url('img/moon.png') no-repeat center;
+    border-radius: 50%;
+    content: "";
+    -webkit-transition: 0.8s;
+    transition: 0.8s;
+}
+  
+.theme-mode input:checked + .slider:before {
+    background: var(--textColor) url('img/sunny.png') no-repeat center;
+}
+
+/* Dark Mode Params */
+.dark-mode{
+    --backgroundColor: var(--white);
+    --textColor: var(--black);
+    --hoverIconColor: var(--black);
+
+    --timeStyle: bold;
+}
+
+.mainScreen_div{
+    height: 100%;
+    width: 100%;
+    top: 0;
+    display: block;
+    position: absolute;
+}
+
+.timeBar_div{
+    width: inherit;
+    text-align: end;
+}
+
+#datetime{
+    width: 140px;
+    padding-left: var(--paddingLeft);
+    padding-right: 20px;
+    font-family: var(--regularFont);
+    color: var(--textColor);
+    font-weight: var(--timeStyle);
+}
+
+.firstPage_div{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.firstPageContentText *{
+    height: 100%;
+    font-size: var(--firstPageTextSize);
+}
+
+.firstPageContentText{
+    display: block;
+    padding-left: var(--paddingLeft);
+    color: var(--textColor);
+    font-family: var(--regularFont);
+    font-weight: var(--timeStyle);
+}
+
+.name1{
+    font-family: 'Ruthie';
+    font-size: 80px;
+    font-weight: var(--timeStyle);
+}
+
+.updateName{
+    color: var(--updatingTextColor);
+}
+
+.availableTextLabel{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-top: 10px;
+    padding-left: 30px;
+    font-family: var(--normalFont);
+    font-size: 16px;
+}
+
+.ring-container_div {
+    position: relative;
+}
+
+.circle {
+    width: 12px;
+    height: 12px;
+    background-color: var(--availableColor);
+    border-radius: 50%;
+    position: absolute;
+    top: 12px;
+    left: 7px;
+}
+
+.ringring {
+    border: 3px solid var(--availableColor);
+    border-radius: 25px;
+    height: 20px;
+    width: 20px;
+    top:5px;
+    position: absolute;
+    animation: pulsate 1s ease-out;
+    animation-iteration-count: infinite; 
+    opacity: 0.0
+}
+
+@keyframes pulsate {
+    0% {-webkit-transform: scale(0.1, 0.1); opacity: 0.0;}
+    50% {opacity: 1.0;}
+    100% {-webkit-transform: scale(1.2, 1.2); opacity: 0.0;}
+}
+
+.socialIcons_div a{
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #818181;
+}
+.socialIcons_div a:hover{
+    color: var(--updatingTextColor);
+}
+
+.firstPageContentText,
+.myImage_div{
+    display: inline-block;   
+}
+
+.myImage_div img {
+    border-radius: 150px;
+    background-image: radial-gradient(var(--lightgray),var(--backgroundColor));
+}
+
+.secondPage_div{
+    height: max-content;
+    display: flex;
+    margin-left: 70px;
+    align-items: center;
+    justify-content: center;
+    
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.secondPageAlign_div{
+    display: inline;
+}
+.heading_div{
+    font-family: var(--regularFont);
+    color: var(--textColor);
+    font-weight: var(--timeStyle);
+}
+.experienceTabel_div{
+    display: flex;
+}
+#tabel_tr{
+    padding-top: 100px;
+}
+#companyName_td{
+    font-family: var(--regularFont);
+    color: var(--lightgray);
+    font-size: 14px;
+    align-items: start;
+    font-weight: var(--timeStyle);
+    width: 150px;
+}
+#expInformation_td{
+    padding-left: 20px;
+    color: var(--textColor);
+    font-family: var(--regularFont);
+    font-weight: var(--timeStyle);
+    font-size: 14px;
+    align-items: start;
+}
+.heading_div{
+    font-size: 30px;
+    font-family: var(--normalFont);
+    padding-bottom: 20px;
+}
+#expInformation_td a{
+    font-size: 16px;
+}
+td{
+    top: 0;
+    text-align: left;
+    max-width: 600px;
+}
+
+.thirdPage_div{
+    height: max-content;
+    display: flex;
+    margin-left: 70px;
+    padding-top: 50px;
+    align-items: center;
+    justify-content: center;
+}
+.thirdPageAlign_div{
+    display: inline;
+}
+.photographyPageLink a{
+    color: #818181;
+}
+.photographyPageLink a:hover{
+    color: var(--updatingTextColor);
+}
+
+
+.fourthPage_div{
+    height: 100%;
+    display: flex;
+    margin-left: 70px;
+    padding-top: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Left contact page */
+.form-horizontal {
+    /*float: left;*/
+    max-width: 400px;
+    font-family: 'Lato';
+    font-weight: 400;
+}
+
+.form-control, 
+textarea {
+    font-style: normal;
+    width: 400px;
+    background-color: var(--backgroundColor);
+    color: var(--textColor);
+    letter-spacing: 1px;
+    min-height: 25px;
+    height: max-content;
+    font-family: var(--normalFont);
+}
+
+.contactName_div,
+.phone_div,
+.email_div,
+.message_div{
+    padding-bottom: 10px;
+}
+
+.availableTextLabelContact{
+    margin-bottom: 30px;
+    padding-top: 10px;
+    padding-left: 30px;
+    font-family: var(--normalFont);
+    font-size: 16px;
+    color: var(--textColor);
+}
+
+.send-button {
+    padding-top: 10px;
+    margin-top: 15px;
+    height: 34px;
+    width: 400px;
+    overflow: hidden;
+    transition: all .2s ease-in-out;
+}
+
+.alt-send-button {
+    width: 400px;
+    height: 34px;
+    transition: all .2s ease-in-out;
+}
+
+.send-text {
+    display: block;
+    margin-top: 10px;
+    font-family: var(--normalFont);
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.alt-send-button:hover {
+    transform: translate3d(0px, -29px, 0px);
+}
+
+.socialIconsContact_div{
+    width: 400px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.socialIconsContact_div a{
+    padding-left: 5px;
+    padding-right: 5px;
+    color: var(--textColor);
+    font-family: var(--normalFont);
+}
+.socialIconsContact_div a:hover{
+    color: var(--updatingTextColor);
+}
+
+.socialIconsContact_div a[title]:hover::after {
+    position: absolute;
+    top: -100%;
+    left: 0;
+}
+
+@media (max-width: 54em) {
+    .name,
+    .name2{
+        font-size: 25px;
+    }
+    .name1{
+        font-size:40px;
+    }
+    #updateNameLabel{
+        font-size:30px;
+    }
+    .availableTextLabel{
+        font-size:12px;
+    }
+    td{
+        top: 0;
+        text-align: left;
+        max-width: 450px;
+    }
+    .heading_div{
+        font-size: 20px;
+        font-family: var(--normalFont);
+    }
+    .availableTextLabelContact{
+        font-size: 12px;
+    }
+    .form-control{
+        font-style: var(--timeStyle);
+    }
+}
+
+@media (max-width: 40em) {
+    .form-control, 
+    textarea,
+    .alt-send-button,
+    .send-button,
+    .socialIconsContact_div{
+        width: 90%;
+    }
+    .form-control{
+        font-style: var(--timeStyle);
+    }
+    .firstPage_div{
+        width: 100%;
+        display: block;
+        top: 100%;
+        -ms-transform: translateY(20%);
+        transform: translateY(20%);
+    }
+    .myImage_div{
+        display: block;
+        padding-left: 70px;
+    }
+    .myImage_div img{
+        height: 260px;
+        background-image: radial-gradient(var(--lightgray),var(--backgroundColor)); 
+    }
+    .secondPage_div{
+        display: block;
+    }
+
+    #companyName_td{
+        font-size: 10px;
+        width: 100px;
+    }
+    #expInformation_td{
+        font-size: 10px;
+        align-items: start;
+    }
+    .heading_div{
+        font-size: 18px;
+    }
+    #expInformation_td a{
+        font-size: 14px;
+        font-family: var(--normalFont);
+    }
+    .bookmarkTrustText{
+        font-size: 9px;
+    }
+}
