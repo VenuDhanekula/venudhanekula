@@ -337,6 +337,8 @@ textarea {
     color: var(--textColor);
     letter-spacing: 1px;
     min-height: 25px;
+    border-color: var(--textColor);
+    border-width: 1px;
     height: max-content;
     font-family: var(--normalFont);
 }
