@@ -346,7 +346,8 @@ textarea {
 .contactName_div,
 .phone_div,
 .email_div,
-.message_div{
+.message_div,
+respondTime_div{
     padding-bottom: 10px;
 }
 
@@ -354,6 +355,12 @@ textarea {
     margin-bottom: 30px;
     padding-top: 10px;
     padding-left: 30px;
+    font-family: var(--normalFont);
+    font-size: 16px;
+    color: var(--textColor);
+}
+
+.respondTime_div{
     font-family: var(--normalFont);
     font-size: 16px;
     color: var(--textColor);
