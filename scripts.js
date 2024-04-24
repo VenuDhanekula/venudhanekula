@@ -19,7 +19,7 @@ function insert_value(){
     scriptURL = scriptURL + "&email="+email;
     scriptURL = scriptURL + "&message="+message;
 
-    var delayInMilliseconds = 500;
+    var delayInMilliseconds = 1000;
     mywindow = window.open(scriptURL,"", "width=500,height=300");
 
     setTimeout(function() {
