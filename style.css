@@ -360,7 +360,10 @@ respondTime_div{
     color: var(--textColor);
 }
 
-.respondTime_div{
+.respondTime{
+    margin-bottom: 30px;
+    padding-top: 10px;
+    padding-left: 30px;
     font-family: var(--normalFont);
     font-size: 16px;
     color: var(--textColor);
