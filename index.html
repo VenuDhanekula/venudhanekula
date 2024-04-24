@@ -19,6 +19,20 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ruthie">
+
+    <style>
+        /* Chrome, Safari, Edge, Opera */
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+        
+        /* Firefox */
+        input[type=number] {
+          -moz-appearance: textfield;
+        }
+    </style>
         
 </head>
 
@@ -296,7 +310,7 @@
 
                     <div class="phone_div">
                         <div class="phoneSub_div">
-                          <input type="text" class="form-control" pattern="[0-9]" id="phone" maxlength="10" placeholder="Phone Number" name="phone">
+                          <input type="number" class="form-control" id="phone" maxlength="10" placeholder="Phone Number" name="phone">
                         </div>
                     </div>
 
