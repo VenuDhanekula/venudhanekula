@@ -287,10 +287,10 @@
                     
                 </div>
 
-                <form id="contact-form" class="form-horizontal" role="form">
+                <form id="contactForm" method="post" action="javascript:;" name="contact-form" onsubmit="insert_value()">
                     <div class="contactName_div">
                         <div class="contactNameSub_div">
-                          <input type="text" class="form-control" placeholder="Name" name="name" value="" required>
+                          <input type="text" class="form-control" id="name" placeholder="Name" name="name" value="" required>
                         </div>
                     </div>
 
@@ -307,7 +307,7 @@
                     </div>
 
                     <div class="message_div">
-                        <textarea class="form-control" rows="10" placeholder="Enter Your Message" name="message" required></textarea>
+                        <textarea class="form-control" rows="10" id="message" placeholder="Enter Your Message" name="message" required></textarea>
                     </div>
 
                     <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
