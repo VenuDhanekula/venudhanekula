@@ -19,13 +19,31 @@ function insert_value(){
     scriptURL = scriptURL + "&email="+email;
     scriptURL = scriptURL + "&message="+message;
 
-    var delayInMilliseconds = 1000;
-    mywindow = window.open(scriptURL,"", "width=500,height=300");
+    let isMobile = window.orientation > -1;
+    console.log(isMobile);
+    console.log(isMobile ? 'Mobile' : 'Not mobile');
 
-    setTimeout(function() {
-        mywindow.close();
-        alert('Thank You! Will Get In Touch Shortly');
-      }, delayInMilliseconds);
+    if(isMobile) {
+        alert('Unable Submit The Information. Resubmit or Contact Me Directly From Below.')
+    }else{
+        var delayInMilliseconds = 500;
+        mywindow = window.open(scriptURL,"", "width=500,height=300");
+        setTimeout(function() {
+            //your code to be executed after 1 second
+            mywindow.close();
+            alert('Thank You! Will Get In Touch Shortly');
+        }, delayInMilliseconds);
 
-    document.getElementById("contactForm").reset();
+      document.getElementById("contactForm").reset();
+    }
+
+    //var delayInMilliseconds = 1000;
+    //mywindow = window.open(scriptURL,"", "width=500,height=300");
+
+    //setTimeout(function() {
+    //    mywindow.close();
+    //    alert('Thank You! Will Get In Touch Shortly');
+    //  }, delayInMilliseconds);
+
+    //document.getElementById("contactForm").reset();
   }
