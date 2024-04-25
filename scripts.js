@@ -23,8 +23,8 @@ function insert_value(){
     mywindow = window.open(scriptURL,"", "width=500,height=300");
 
     setTimeout(function() {
-        mywindow.close();
-        //alert('Thank You! Will Get In Touch Shortly');
+        //mywindow.close();
+        alert('Thank You! Will Get In Touch Shortly');
       }, delayInMilliseconds);
 
     document.getElementById("contactForm").reset();
