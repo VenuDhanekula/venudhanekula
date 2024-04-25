@@ -24,7 +24,7 @@ function insert_value(){
     console.log(isMobile ? 'Mobile' : 'Not mobile');
 
     if(isMobile) {
-        alert('Unable To Submit The Information.\n Resubmit or Contact Me Directly From Below Links.')
+        alert('Unable To Submit The Information.\n\nResubmit or Contact Me Directly From Below Links.')
     }else{
         var delayInMilliseconds = 500;
         mywindow = window.open(scriptURL,"", "width=500,height=300");
