@@ -3,6 +3,10 @@ function darkModeToggle() {
     element.classList.toggle("dark-mode");
 }
 
+function updateFormData(){
+    document.getElementById("contactForm").reset();
+    alert('Will get in touch shortly');
+}
 
 function insert_value(){
     var scriptURL = "https://script.google.com/macros/s/AKfycbzKSzQHu5DLCLSpWxPfhWqeeNfINo3VutcvDnjX9CkCEFWr92mstAWcwNIHSKsYEaVKug/exec"
